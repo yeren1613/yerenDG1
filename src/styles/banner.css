@@ -1,0 +1,21 @@
+/* 父容器样式 */
+.banner {
+  display: flex;
+  overflow-x: auto; /* 允许水平滚动 */
+  white-space: nowrap; /* 防止换行 */
+}
+
+/* 图片样式 */
+.banner-img {
+  max-width: 20%; /* 最大宽度为容器宽度的40% */
+  height: auto; /* 高度自动调整以保持宽高比 */
+  width: 20%; /* 宽度为容器宽度的50%，如果你希望图片宽度更小，可以调整这个百分比 */
+  object-fit: contain; /* 保持宽高比，裁剪图片以覆盖整个元素区域 */
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) { /* 调整为更合理的断点 */
+  .banner-img {
+    width: 40%; /* 在小屏幕上，图片宽度设为100% */
+  }
+}
