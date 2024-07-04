@@ -3,7 +3,48 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="欢迎来到 野人洞观！">
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #646060;
+}
+
+.topnav a {
+  float: left;
+  color: #121c55;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a href="/">首页</a>
+  <a href="/about">关于我们</a>
+</div>
+
+</body>
 	<main>
 		<svg
 			class="astro-a"
@@ -11,7 +52,7 @@ import Card from '../components/Card.astro';
 			height="623"
 			viewBox="0 0 495 623"
 			fill="none"
-			xmlns="http://www.w3.org/2000/svg"
+			xmlns="/public/image/w.png"
 			aria-hidden="true"
 		>
 			<path
@@ -33,31 +74,30 @@ import Card from '../components/Card.astro';
 				</linearGradient>
 			</defs>
 		</svg>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
+		<h1>欢迎来到野人洞观 <span class="text-gradient">Astro</span></h1>
 		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
+			在这里我们将为你提供有效、及时的信息和有效的操作方法,为你的学习生活赋能,一起成为新时代的野人！
 		</p>
 		<ul role="list" class="link-card-grid">
 			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
+				href="/posts/AIc"
+				title="AI使用方法"
+				body="学习AI的基本使用方法能够大幅提高你的学习和工作效率。"
 			/>
 			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
+				href="/posts/jiuye"
+				title="就业政策"
+				body="习近平总书记在党的二十大报告中指出：“必须坚持在发展中保障和改善民生，鼓励共同奋斗创造美好生活，不断实现人民对美好生活的向往。”"
 			/>
 			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
+				href="/posts/shixi"
+				title="实习资讯"
+				body="很多时候不是没有地方实习,而是我们没找到哪些地方可以实习。"
 			/>
 			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
+				href="/posts/jianli"
+				title="求职简历写法"
+				body="简历是单位了解人才最好的方式,同时也是我们展现自己能力的地方,学会如何写好简历对应届生来说很重要。"
 			/>
 		</ul>
 	</main>
@@ -69,7 +109,7 @@ import Card from '../components/Card.astro';
 		padding: 1rem;
 		width: 800px;
 		max-width: calc(100% - 2rem);
-		color: white;
+		color: rgb(34, 65, 116);
 		font-size: 20px;
 		line-height: 1.6;
 	}

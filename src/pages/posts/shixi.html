@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+        body {
+          margin: 0;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .topnav {
+          overflow: hidden;
+          background-color: #333;
+        }
+        
+        .topnav a {
+          float: left;
+          color: #f2f2f2;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+          font-size: 17px;
+        }
+        
+        .topnav a:hover {
+          background-color: #ddd;
+          color: black;
+        }
+        
+        .topnav a.active {
+          background-color: #4CAF50;
+          color: white;
+        }
+        </style>
+        </head>
+        <body>
+        
+        <div class="topnav">
+            <a href="/">首页</a>
+            <a href="/about">关于我们</a>
+        </div>
+    
+        </body>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+        * {box-sizing: border-box}
+        body {font-family: Verdana, sans-serif; margin:0}
+        .mySlides {display: none}
+        img {vertical-align: middle;}
+        
+        /* 幻灯片容器 */
+        .slideshow-container {
+          max-width: 1000px;
+          position: relative;
+          margin: auto;
+        }
+        
+        /* 下一个 & 上一个按钮 */
+        .prev, .next {
+          cursor: pointer;
+          position: absolute;
+          top: 50%;
+          width: auto;
+          padding: 16px;
+          margin-top: -22px;
+          color: white;
+          font-weight: bold;
+          font-size: 18px;
+          transition: 0.6s ease;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+        }
+        
+        /* 将“下一步按钮”放在右边 */
+        .next {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+        }
+        
+        /* 在鼠标悬停时，添加一个有点透明的黑色背景色 */
+        .prev:hover, .next:hover {
+          background-color: rgba(0,0,0,0.8);
+        }
+        
+        /* 标题文本 */
+        .text {
+          color: #f2f2f2;
+          font-size: 15px;
+          padding: 8px 12px;
+          position: absolute;
+          bottom: 8px;
+          width: 100%;
+          text-align: center;
+        }
+        
+        /* 数字文本（1/3 等）*/
+        .numbertext {
+          color: #f2f2f2;
+          font-size: 12px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+        }
+        
+        /* 点/项目符号/指标 */
+        .dot {
+          cursor: pointer;
+          height: 15px;
+          width: 15px;
+          margin: 0 2px;
+          background-color: #bbb;
+          border-radius: 50%;
+          display: inline-block;
+          transition: background-color 0.6s ease;
+        }
+        
+        .active, .dot:hover {
+          background-color: #717171;
+        }
+        
+        /* 渐变动画 */
+        .fade {
+          -webkit-animation-name: fade;
+          -webkit-animation-duration: 1.5s;
+          animation-name: fade;
+          animation-duration: 1.5s;
+        }
+        
+        @-webkit-keyframes fade {
+          from {opacity: .4} 
+          to {opacity: 1}
+        }
+        
+        @keyframes fade {
+          from {opacity: .4} 
+          to {opacity: 1}
+        }
+        
+        /* 在较小的屏幕上，减小文本大小 */
+        @media only screen and (max-width: 300px) {
+          .prev, .next,.text {font-size: 11px}
+        }
+        </style>
+        </head>
+        <body>
+        
+        <div class="slideshow-container">
+        
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="/public/image/wy (1).jpeg" style="width:100%">
+          <div class="text">网易</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="/public/image/wy (1).jpg" style="width:100%">
+          <div class="text">网易云</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="/public/image/wy (2).jpg" style="width:100%">
+          <div class="text">网易云</div>
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+        
+        <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
+        <h1>体育频道核心资讯组实习编辑-网易新闻</h1>
+        <h2>职位描述:</h2>
+        <p>1、奥运会资讯报道，奥运会页面栏目更新，奥运会端外运营</p>
+        <p>职位要求:</p>
+        <P>1、热爱体育、熟悉田径、游泳、乒乓球、排球等其中一个或者多个综合体育赛事项目</P>
+        <P>2、有良好的文字功底</P>
+        <P>3、熟练使用各种办公软件</P>
+        <P>4、能够确保实习时间，一经录用能够尽快到岗</P>
+        <P>5、本科或研究生在校学生，可以实习三个月时间</P>
+        <P>6、工作/面试地点：北京</P>
+        <P>简历标题：岗位-姓名-学校-专业</P>
+        <h3>【简历需标注好最早入职时间、可实习期、每周可实习天数】</h3>
+        <P>投递邮箱：zhengyufei01@corp.netease.com</P>
+        <P>工作地点：北京</P>
+        
+        
+        <h1>短视频品类创作者运营实习生-网易新闻</h1>
+        
+        <P>职位描述：</P>
+        <P>1、 支持网易游戏业务相关岗位招聘工作，满足招聘需求并对招聘结果负责</P>
+        <P>2、 招聘全流程跟进：包含但不限制于简历筛选、电话预约、面试安排等流程跟进</P>
+        <P>3、 管理招聘需求、招聘信息的及时维护和更新、招聘效果的分析和招聘成果的跟踪</P>
+        <P>4、 开拓并维护招聘渠道，持续吸引并转化潜在候选人</P>
+        <P>职位要求：</P>
+        <P>1、 本科及以上在读学生，2025年及以后毕业or研一研二在读，熟悉游戏行业岗位招聘者优先</P>
+        <P>2、可快速到岗，实习时长可满足3个月及以上，每周实习4天及以上</P>
+        <P>3、 善于沟通、坚韧抗压、积极认真、有耐心、自我驱动性强</P>
+        <P>4、 喜欢玩游戏，对市面上的游戏较为了解者优先</P>
+        <P>简历标题：岗位-姓名-学校-专业</P>
+        <h3>【简历需标注好最早入职时间、可实习期、每周可实习天数】</h3>
+        <P>投递邮箱：chenhaikuo@corp.netease.com</P>
+        <P>工作地点：北京</P>
+        
+        
+        <h1>短视频运营实习生-网易有道</h1>
+        
+        <P>职位描述：</P>
+        <P>1、参与短视频的制作与运营，实时把握热点</P>
+        <P>2、负责部分视频的编辑、剪切、加字幕等工作</P>
+        <P>3、以数据为导向，针对用户反馈需求随时创新或调整运营策略</P>
+        <P>4、参与视频活动的构思、策划</P>
+        <P>5、其他分配的相关工作</P>
+        <P>职位要求：</P>
+        <P>1、文案表达能力ok，沟通能力强</P>
+        <P>2、熟练视频拍摄和剪辑工作，熟练使用office、pr、ps等软件</P>
+        <P>3、短视频重度爱好者，脑洞大，有相关爆款创作经验者优先</P>
+        <P>简历标题：岗位-姓名-学校-专业</P>
+        <h3>【简历需标注好最早入职时间、可实习期、每周可实习天数】</h3>
+        <P>投递邮箱：zhouchenyi@corp.netease.com</P>
+        <P>工作地点：北京</P>
+        
+        
+        <h1>网易号平台运营组实习生-网易新闻</h1>
+        
+        <P>职位描述：</P>
+        <P>1、网易号账号审核相关</P>
+        <P>2、网易号账号原创评估与判断</P>
+        <P>3、网易号全平台账号对接和维护</P>
+        <P4、部门安排的其他工作></P>
+        <P>职位要求：</P>
+        <P> 1、可实习3个月以上，能保证每周5天坐班实习</P>
+        <P>2、能够接受节假日工作调休</P>
+        <P>3、了解及热爱自媒体，细心尽责，踏实认真</P>
+        <P>简历标题：岗位-姓名-学校-专业</P>
+        <h3>【简历需标注好最早入职时间、可实习期、每周可实习天数】</h3>
+        <P>投递邮箱：zhengyufei01@corp.netease.com</P>
+        <P>工作地点：北京</P>
+        
+        <h1>热点运营实习生-网易云音乐</h1>
+        
+        <P>职位描述:</P>
+        <P>1、完成网易云音乐重点产品功能的日常审核工作，包括但不限于搜索内容审核、热搜榜文案维护</P>
+        <P>2、完成云音乐站内热点运营相关工作，包括站外每日热点收集、整合站内资源等</P>
+        <P>3、辅助完成综艺运营相关工作</P>
+        <P>职位要求:</P>
+        <P>1、是移动互联网的深度用户，了解各大app的基础功能</P>
+        <P>2、有一定的讯息敏感度，并能够做到迅速反应及执行</P>
+        <P>3、逻辑性强、沟通能力好，能应对大量沟通和跨部门对接工作</P>
+        <P>4、文笔好，捕捉热点能力强，能够承担一定文案输出工作</P>
+        <P>5、热爱音乐，听歌范围广，至少对某一音乐门类有较为深入的了解</P>
+        <P>6、广播电视、新闻、信息资源管理类专业优先</P> 
+        <P>7、每周4天以上（能够到岗5天优先），实习时间3个月以上，7月中旬到岗优先。(简历需备注到岗时间和实习时长)</P>
+        <P>简历标题：岗位-姓名-学校-专业</P>
+        <h3>【简历需标注好最早入职时间、可实习期、每周可实习天数】</h3>
+        <P>投递邮箱：fujiamei@corp.netease.com</P>
+        <P>工作地点：北京</P>
+        
+        
+        <h1>内容编辑实习生-网易有道</h1>
+        <P>职位描述:</P>
+        <P>1、 图书文稿、图片、音频等配套内容的编辑审稿工作（有k12教辅编辑经验优先）</P>
+        <P> 2、配合图书出版工作中的相关环节，包括书号申请材料、节点跟进等工作</P>
+        <P>3、关注市场需求、行业动态及热点话题，配合完成选题调研、内容方案撰写等工作</P> 
+        <P>4、参与线上、线下的图书推广及相关物料的准备工作</P>
+        <P>5、配合公司相关部门完成其他文字方面的工作</P>
+        <P>职位要求:</P>
+        <P>1、全日制本科或研究生在读，编辑出版、K12教育教学、师范等专业优先，有语文类图书工作经验优先</P>
+        <P>2、 每周全职工作4天以上，实习期6个月以上</P>
+        <P>3、 熟练应用office办公系列软件，能进行简单的图像处理</P>
+        <P>4、 具备良好的文字功底、文学审美鉴赏能力、逻辑分析能力与信息采编整合能力</P>
+        <P>5、 工作态度严谨，有责任心和较强的执行力，团队意识强</P>
+        <P>简历标题：岗位-姓名-学校-专业</P>
+        <h3>【简历需标注好最早入职时间、可实习期、每周可实习天数】</h3>
+        <P>投递邮箱：liyuqing@corp.netease.com</P>
+        <P>工作地点：北京</P>
+        
+        
+        <h1>内容运营实习生（数字专辑）-网易云音乐</h1>
+        <P>职位描述:</P>
+        <P>1、协助网易云音乐数字专辑运营执行工作，包含宣发方案/运营活动方案策划与执行，能够独自撰写各宣发渠道（站内/微博/公众号等）相关文案，根据数字专辑等业务内容制作输出相关宣发物料</P>
+        <P>2、跟进数字专辑业务运营方案输出级相关运营配置，能够独立策划并执行相关活动，与各业务侧沟通协作推动内容上线</P>
+        <P>3、结合数字专辑内容进行社区热点运营，优化社区运营方案，增强社区氛围与用户圈入</P>
+        <P>4、对项目运营效果进行复盘总结，提炼运营优化策略</P>
+        <P>职位要求:</P>
+        <P>1、全日制在校本科生或研究生，每周能够工作5天，实习时间6个月以上者优先</P>
+        <P>2、有互联网/娱乐行业相关实习经验，对音乐类内容有一定了解，具备一定产品思维</P>
+        <P>3、具有较强的学习能力、沟通能力与责任心</P>
+        <P>4、有追星经验优先（请体现在简历中）(简历需备注到岗时间，实习时长）</P>
+        <P>简历标题：岗位-姓名-学校-专业</P>
+        <h3>【简历需标注好最早入职时间、可实习期、每周可实习天数】</h3>
+        <P>投递邮箱：fujiamei@corp.netease.com</P>
+        <P>工作地点：北京</P>
+        
+        
+        <h1>产品运营实习生（商业化）-网易有道</h1>
+        <P>职位描述：</P>
+        <P>1、负责有道词典的课程投放工作，对接各课程需求方，完成投放物料审核、课程上架及推广工作</P>
+        <P>2、完成对接项目的数据分析与总结，并及时做出投放调整，提升流量投放效率</P>
+        <P>职位要求：</P>
+        <P>1、 全日制本科及以上在校大学生，一周需线下坐班至少4天，实习至少4个月（硬性要求）</P>
+        <P>2、有较强的洞察力和创新能力，擅长文案撰写，文字有趣又实用</P>
+        <P>3、具备一定的数据分析能力，熟悉excel常见函数的操作</P>
+        <P>4、专业不限，工作主动细致，注重细节，善于处理流程性事物</P>
+        <P>简历标题：岗位-姓名-学校-专业</P>
+        <h3>【简历需标注好最早入职时间、可实习期、每周可实习天数】</h3>
+        <P>投递邮箱：zhongzq@rd.netease.com</P>
+        <P>工作地点：广州</P>
+        
+        
+        <h1>标签标注运营实习生-网易云音乐</h1>
+        <P>职位描述：</P>
+        <P>1、负责曲库歌曲的打标工作，包含曲风、情绪、场景标签类型</P>
+        <P>2、负责对曲库标签数据的准确度进行校验</P>
+        <P>3、参与标签体系的优化构思，能持续输出自己的创意</P>
+        <P>4、协助团队完成其他协同工作</P>
+        <P>职位要求：</P>
+        <P>1、喜欢音乐，关注音乐的流行趋势，熟悉至少一种风格或地区音乐者优先</P>
+        <P>2、对音乐有辨析、判断能力，能够定义不同歌曲之间属性上的区别</P>
+        <P>3、为人积极进取、耐心细致，能按时完成手里的任务</P>
+        <P>4、具备团队合作意识，执行力强</P>
+        <P>5、每周至少实习4天，至少保障3~6个月实习期，需尽快到岗（简历最好能体现出个人对音乐的喜好和了解程度及云音乐ID）</P>
+        <P>简历标题：岗位-姓名-学校-专业</P>
+        <h3>【简历需标注好最早入职时间、可实习期、每周可实习天数】</h3>
+        <P>投递邮箱：wf.yejin@corp.netease.com</P>
+        <P>工作地点：杭州</P>
+        
+        
+        <h1>热点内容运营实习生（小语种）-网易云音乐</h1>
+        <P>职位描述：</P>
+        <P>1、负责网易云音乐小语种内容的曲库建设，包括音乐内容及热点线索的入库、物料维护等</P>
+        <P>2、负责挖掘归纳整理输出特定语种地区的突发/爆款音乐热点，并制定站内承接的运营方案</P>
+        <P>3、参与小语种热点内容在站内的内容分发，包括但不限于歌单、搜索、推荐</P>
+        <P>4、协助分析各热点生命周期情况，并对分发效果进行评估，为该小语种调整对应的动作方向</P>
+        <P>职位要求：</P>
+        <P>1、掌握至少一门小语种，如俄语、泰语、越南语、哈萨克语等；并日常关注其音乐内容</P>
+        <P>2、具备网感和热点嗅觉，对负责语种当地的音乐热点敏感，对热点趋势能够有自己的判断</P>
+        <P>3、执行力强、责任心强，沟通能力、抗压能力良好</P>
+        <P>4、保障每周4天以上出勤，实习时长至少4个月</P>
+        <P>5、简历中需体现个人的音乐喜好及云音乐用户ID</P>
+        <P>简历标题：岗位-姓名-学校-专业</P> 
+        <h3>【简历需标注好最早入职时间、可实习期、每周可实习天数】</h3>
+        <P>投递邮箱：wf.yejin@corp.netease.com</P>
+        <P>工作地点：杭州</P> 
+        
